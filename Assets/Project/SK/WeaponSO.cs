@@ -9,4 +9,6 @@ public class WeaponSO : ScriptableObject
     public GameObject HitVFXPrefab; // 적 히트 생성 이펙트
     public bool isAutomatic = false; // 자동 발사 여부
     public bool CanZoom = false; // 줌 가능 여부
+    public float ZoomAmount = 10f;
+    public float ZoomRotationSpeed = .3f;
 }

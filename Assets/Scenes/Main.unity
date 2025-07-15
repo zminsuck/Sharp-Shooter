@@ -22246,6 +22246,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1847458883, guid: d18cf222b989efc49b475b0290489c11, type: 3}
   m_PrefabInstance: {fileID: 631498996}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &640624198 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3452229118208614425, guid: f47fc87a9dc96d34aaa9d01f51dc38e2, type: 3}
+  m_PrefabInstance: {fileID: 1031443497410411563}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &640909549
 GameObject:
   m_ObjectHideFlags: 0
@@ -38390,7 +38401,7 @@ GameObject:
   - component: {fileID: 1131725827}
   - component: {fileID: 1131725826}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Overlay Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38472,6 +38483,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1464305246}
+  - {fileID: 1217278938}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -40996,6 +41008,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1221282845, guid: c519a6279bf49364eb3fdb21ffb5516c, type: 3}
   m_PrefabInstance: {fileID: 1216514640}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1217278937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1217278938}
+  - component: {fileID: 1217278940}
+  - component: {fileID: 1217278939}
+  m_Layer: 5
+  m_Name: Zoom Vignette
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1217278938
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217278937}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1131725829}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1217278939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217278937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 52a5735d065236542b52ea64d3dccb26, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1217278940
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217278937}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1217916705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47331,7 +47418,7 @@ GameObject:
   - component: {fileID: 1464305248}
   - component: {fileID: 1464305247}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71284,6 +71371,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7421063712569119678, guid: 0c0f01f68977f434dbed00313f08328f, type: 3}
+      propertyPath: zoomVignette
+      value: 
+      objectReference: {fileID: 1217278937}
+    - target: {fileID: 7421063712569119678, guid: 0c0f01f68977f434dbed00313f08328f, type: 3}
+      propertyPath: playerFollowCamera
+      value: 
+      objectReference: {fileID: 640624198}
     - target: {fileID: 8539216120509833798, guid: 0c0f01f68977f434dbed00313f08328f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 37.41
@@ -71486,6 +71581,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 654885665600606772, guid: 0f8db7c1816785e46b83e10c66f4dd62, type: 3}
+      propertyPath: field of view
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7812793022222124810, guid: 0f8db7c1816785e46b83e10c66f4dd62, type: 3}
       propertyPath: m_Name
       value: MainCamera
