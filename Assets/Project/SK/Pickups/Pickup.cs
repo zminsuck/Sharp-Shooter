@@ -3,7 +3,7 @@ using UnityEngine;
 public abstract class Pickup : MonoBehaviour
 {
     [SerializeField] float rotationSpeed = 100f;
-    const string PLYER_STRING = "Player";
+    const string PLAYER_STRING = "Player";
 
     private void Update()
     {
@@ -11,7 +11,7 @@ public abstract class Pickup : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(PLYER_STRING))
+        if (other.CompareTag(PLAYER_STRING))
         {
             ActiveWeapon activeWeapon = other.GetComponentInChildren<ActiveWeapon>();
             OnPickup(activeWeapon);

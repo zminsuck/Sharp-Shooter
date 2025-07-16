@@ -16,11 +16,10 @@ public class SpawnGate : MonoBehaviour
     }
     IEnumerator SpawnRoutine()
     {
-        yield return new WaitForSeconds(spawnTime);
-
-        // 이 시점에서 오브젝트가 파괴되었는지 다시 체크
-        if (!this || !gameObject.activeInHierarchy) yield break;
-
-        Instantiate(enemyPrefab, spawnPoint.position, transform.rotation);
+        while (player)
+        {
+            Instantiate(enemyPrefab, spawnPoint.position, transform.rotation);
+            yield return new WaitForSeconds(spawnTime);
+        }
     }
 }
